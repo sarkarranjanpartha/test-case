@@ -1,0 +1,10 @@
+.arg__top__div__control {
+  margin: 1rem;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+.btn__ass__div__control {
+    margin: 1rem;
+    padding: 5px;
+  }
