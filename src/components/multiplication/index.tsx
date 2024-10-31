@@ -9,6 +9,17 @@ const Multiplication = () => {
   const [multiplication, setMultiplication] = useState(0);
   const [number1, setNumber1] = useState(0);
   const [number2, setNumber2] = useState(0);
+
+  const handleChangedNumber1 = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNumber1(Number(event.target.value ?? 0));
+  };
+  const handleChangedNumber2 = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNumber2(Number(event.target.value ?? 0));
+  };
+
+  const handleMultiplication = () => {
+    setMultiplication(number1 * number2);
+  };
   return (
     <>
       <div className="arg__top__div__control">
@@ -22,6 +33,7 @@ const Multiplication = () => {
               shrink: true,
             },
           }}
+          onChange={handleChangedNumber1}
         />
 
         <TextField
@@ -34,10 +46,15 @@ const Multiplication = () => {
               shrink: true,
             },
           }}
+          onChange={handleChangedNumber2}
         />
       </div>
       <div className="btn__ass__div__control">
-        <Button variant="contained" startIcon={<CloseIcon />}>
+        <Button
+          variant="contained"
+          startIcon={<CloseIcon />}
+          onClick={handleMultiplication}
+        >
           Multiplication
         </Button>
       </div>
