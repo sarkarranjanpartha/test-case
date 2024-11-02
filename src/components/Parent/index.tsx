@@ -13,8 +13,9 @@ const Parent = () => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="sm">
+      <Container maxWidth="sm" data-testid="parent-container">
         <Box
+          data-testid="parent-box"
           component="section"
           sx={{
             p: 2,
