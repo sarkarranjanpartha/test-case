@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
 
 import "../../components/css/custom-css.css";
-import React, { HtmlHTMLAttributes, useState } from "react";
+import React, { useState } from "react";
 
 const Addition = () => {
   const [addition, setAddition] = useState(0);
